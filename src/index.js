@@ -6,11 +6,11 @@ function eval() {
 function expressionCalculator(expr) {
     console.log(expr)
     const operators = {
-        '+': (x, y) => +x + +y,
-        '-': (x, y) => x - y,
-        '*': (x, y) => x * y,
-        '/': (x, y) => {
-            if(y===0) return new Error();
+        '+': (y, x) => +x + +y,
+        '-': (y, x) => x - y,
+        '*': (y, x) => x * y,
+        '/': (y, x) => {
+            if(y == 0) throw new Error("TypeError: Division by zero.");
             else return x / y},
     };
     const priorityOperators = {
@@ -22,54 +22,41 @@ function expressionCalculator(expr) {
 
     const exprArr = expr.replace(/\s+/g, '').match(/[^-+*/()]+|[^]/g);
     console.log(exprArr)
-    
+
     let evaluate = (exprArr) => {
         let stack = [];
         let digits = []
-        // let exitStr = '';
-        exprArr.forEach(element => {
-            if(/\d/.test(element)) {
-                if(stack.length !== 0) {
-                    stack.push(operators[stack.pop()](digits.pop(), element));
-                } else digits.push(element);
+        let exitStr = '';
+
+
+    exprArr.forEach(element => {
+        if(/\d/.test(element)) {
+            digits.push(element);        
+        } else if (priorityOperators[stack[stack.length - 1]] < priorityOperators[element]) {
+            stack.push(element);
+        } else {
+            while (priorityOperators[element] <= priorityOperators[stack[stack.length - 1]]) {
+                let lastOperation = stack.pop();
+                digits.push(operators[lastOperation](digits.pop(), digits.pop()));
             }
-             else {
-                
-                stack.push(element);
-                // exitStr='';
-            } 
-        });
+        stack.push(element);
+        }
+        console.log(digits)
+    });
+
+        while (stack.length > 0) {
+            let lastOperation = stack.pop();
+            
+           
+            digits.push(operators[lastOperation](digits.pop(), digits.pop()));
+        }
+        
         console.log(digits, 4)
         console.log(stack, 5)
-        return stack.pop();
+        return digits.pop();
     }
-
-    // console.log(stack, 1);
+    
     return evaluate(exprArr);
-    // for(let i=0; i<exprArr.length; i++) {
-    //     if(/\d/.test(exprArr[i])) {
-    //         console.log(exprArr[i],1)
-    //         digits.push(Number(exprArr[i]));            
-    //     }
-    // // }
-    // console.log(digits)
-    
-    // let evaluate = (expr) => {
-    //     let stack = [];
-        
-    //     expr.split('').forEach((token) => {
-    //         if (token in operators) {
-    //             let [y, x] = [stack.pop(), stack.pop()];
-    //             stack.push(operators[token](x, y));
-    //         } else {
-    //             stack.push(parseFloat(token));
-    //         }
-    //     });
-    
-    //     console.log(stack.pop());
-    //     return stack.pop();
-    // };
-    // return evaluate;
     
 }
 

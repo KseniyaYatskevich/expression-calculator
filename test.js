@@ -32,96 +32,96 @@ describe("Easy", function() {
     });
 
     
-//     it("Mixed base test 1", function() {
-//         const expr = " 49 * 63 / 58 * 36 ";
-//         const result = 1916.0690;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 1", function() {
+        const expr = " 49 * 63 / 58 * 36 ";
+        const result = 1916.0690;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 2", function() {
-//         const expr = " 84 + 62 / 33 * 10 + 15 ";
-//         const result = 117.7879;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 2", function() {
+        const expr = " 84 + 62 / 33 * 10 + 15 ";
+        const result = 117.7879;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 3", function() {
-//         const expr = " 48 + 59 * 86 * 92 * 23 ";
-//         const result = 10736632.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 3", function() {
+        const expr = " 48 + 59 * 86 * 92 * 23 ";
+        const result = 10736632.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 4", function() {
-//         const expr = " 16 + 25 - 92 + 54 / 66 ";
-//         const result = -50.1818;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 4", function() {
+        const expr = " 16 + 25 - 92 + 54 / 66 ";
+        const result = -50.1818;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 5", function() {
-//         const expr = " 64 + 19 - 77 - 93 ";
-//         const result = -87.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 5", function() {
+        const expr = " 64 + 19 - 77 - 93 ";
+        const result = -87.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 6", function() {
-//         const expr = " 88 - 72 + 55 * 57 ";
-//         const result = 3151.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 6", function() {
+        const expr = " 88 - 72 + 55 * 57 ";
+        const result = 3151.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 7", function() {
-//         const expr = " 99 * 55 / 30 + 50 ";
-//         const result = 231.5000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 7", function() {
+        const expr = " 99 * 55 / 30 + 50 ";
+        const result = 231.5000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 8", function() {
-//         const expr = " 11 - 88 + 84 - 48 ";
-//         const result = -41.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 8", function() {
+        const expr = " 11 - 88 + 84 - 48 ";
+        const result = -41.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 9", function() {
-//         const expr = " 68 * 60 / 87 / 53 + 17 ";
-//         const result = 17.8848;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 9", function() {
+        const expr = " 68 * 60 / 87 / 53 + 17 ";
+        const result = 17.8848;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 10", function() {
-//         const expr = " 63 - 69 - 46 + 57 ";
-//         const result = 5.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 10", function() {
+        const expr = " 63 - 69 - 46 + 57 ";
+        const result = 5.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 11", function() {
-//         const expr = " 60 + 29 / 57 - 85 ";
-//         const result = -24.4912;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 11", function() {
+        const expr = " 60 + 29 / 57 - 85 ";
+        const result = -24.4912;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 12", function() {
-//         const expr = " 34 * 18 * 55 - 50 ";
-//         const result = 33610.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 12", function() {
+        const expr = " 34 * 18 * 55 - 50 ";
+        const result = 33610.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 13", function() {
-//         const expr = " 12 * 3 - 18 + 34 - 84 ";
-//         const result = -32.0000;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 13", function() {
+        const expr = " 12 * 3 - 18 + 34 - 84 ";
+        const result = -32.0000;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 14", function() {
-//         const expr = " 70 / 42 - 52 - 64 / 35 ";
-//         const result = -52.1619;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
+    it("Mixed base test 14", function() {
+        const expr = " 70 / 42 - 52 - 64 / 35 ";
+        const result = -52.1619;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
     
-//     it("Mixed base test 15", function() {
-//         const expr = " 39 / 41 + 100 + 45 ";
-//         const result = 145.9512;
-//         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-//     });
-// });
+    it("Mixed base test 15", function() {
+        const expr = " 39 / 41 + 100 + 45 ";
+        const result = 145.9512;
+        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    });
+});
 
 // describe("Medium", function() {
 //     it("Brackets must be paired", function() {
@@ -434,9 +434,9 @@ describe("Easy", function() {
 //         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
 //     });
     
-    it("Nested brackets test 30", function() {
-        const expr = " 59 - 13 + (  25 * 22 / (  47 / 38 * (  64 / 93 - 91 + 72  ) * 66  ) + 43 - 5  ) * 39 / 55 ";
-        const result = 72.6846;
-        expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
-    });
-})
+    // it("Nested brackets test 30", function() {
+    //     const expr = " 59 - 13 + (  25 * 22 / (  47 / 38 * (  64 / 93 - 91 + 72  ) * 66  ) + 43 - 5  ) * 39 / 55 ";
+    //     const result = 72.6846;
+    //     expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
+    // });
+// })
